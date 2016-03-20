@@ -22,6 +22,7 @@ BOARD_KERNEL_CMDLINE := console=ttyS1,115200n8
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_PAGESIZE := 2048
 TARGET_PREBUILT_KERNEL := device/intex/hy801_intex_16/kernel
+BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --ramdisk_offset 0x01000000 --tags_offset 0x00000100 --dt device/intex/hy801_intex_16/dt.img
 
 # Partitions
 BOARD_BOOTIMAGE_PARTITION_SIZE := 0x105c0000
@@ -37,6 +38,7 @@ BOARD_USE_CUSTOM_RECOVERY_FONT := \"roboto_15x24.h\"
 BOARD_HAS_NO_SELECT_BUTTON := true
 BOARD_HDPI_RECOVERY := true
 BOARD_SUPPRESS_EMMC_WIPE := true
+BOARD_UMS_LUNFILE := "/sys/class/android_usb/android0/f_mass_storage/lun/file"
 
 # Bootanimation
 TARGET_SCREEN_WIDTH := 480
