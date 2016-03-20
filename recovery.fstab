@@ -1,16 +1,11 @@
-/dev/block/platform/sprd-sdhci.3/by-name/system			/system			ext4	defaults	defaults
-/dev/block/platform/sprd-sdhci.3/by-name/userdata		/data			ext4	defaults	defaults
-/dev/block/platform/sprd-sdhci.3/by-name/cache			/cache			ext4	defaults	defaults
-/dev/block/platform/sprd-sdhci.3/by-name/misc			/misc			emmc	defaults	defaults
-/dev/block/platform/sprd-sdhci.3/by-name/boot			/boot			emmc	defaults	defaults
-/dev/block/platform/sprd-sdhci.3/by-name/recovery		/recovery		emmc	defaults	defaults
+/dev/block/platform/sprd-sdhci.3/by-name/system		/system		ext4    ro                                                  				wait
+/dev/block/platform/sprd-sdhci.3/by-name/userdata 	/data           ext4    noatime,nosuid,nodev,noauto_da_alloc,discard,journal_async_commit,errors=panic  wait,check,encryptable=footer
+/dev/block/platform/sprd-sdhci.3/by-name/cache	  	/cache    	ext4    noatime,nosuid,nodev,discard,journal_async_commit,errors=panic      		wait,check
+/dev/block/platform/sprd-sdhci.3/by-name/prodnv   	/productinfo 	ext4 	noatime,nosuid,nodev,nomblk_io_submit 						wait,check
+/dev/block/platform/sprd-sdhci.3/by-name/misc		/misc		emmc	defaults									defaults
+/dev/block/platform/sprd-sdhci.3/by-name/boot		/boot		emmc	defaults	defaults							defaults
+/dev/block/platform/sprd-sdhci.3/by-name/recovery	/recovery	emmc	defaults	defaults							defaults
 
-/dev/block/platform/sprd-sdhci.3/by-name/prodnv			/productinfo	ext4	defaults	defaults
-/dev/block/platform/sprd-sdhci.3/by-name/logo			/logo			emmc	defaults	defaults
-/dev/block/platform/sprd-sdhci.3/by-name/fbootlogo		/fbootlogo		emmc	defaults	defaults
-/dev/block/mmcblk0boot1									/uboot			emmc	defaults	defaults
-/dev/block/mmcblk0boot0									/spl			emmc	defaults	defaults
 
-/devices/sprd-sdhci.3/mmc_host/mmc0      auto         vfat defaults voldmanaged=internalsd:by-name=internalsd,noemulatedsd
-/devices/sprd-sdhci.0/mmc_host/mmc1      auto         vfat defaults voldmanaged=sdcard0:auto,noemulatedsd
-/devices/dwc_otg.0/usb1/1-1/1-1:1.0      auto         vfat defaults voldmanaged=usbdisk:auto
+/devices/platform/sprd-sdhci.0/mmc_host/mmc1            auto  		auto     defaults       voldmanaged=sdcard1:auto,noemulatedsd
+#/devices/dwc_otg.0/usb1/1-1/1-1:1.0      auto         vfat defaults voldmanaged=usbdisk:auto
