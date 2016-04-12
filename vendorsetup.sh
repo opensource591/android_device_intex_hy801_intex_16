@@ -1,1 +1,1 @@
-add_lunch_combo cm_hy801_intex_16-eng
+add_lunch_combo omni_hy801_intex_16-eng
