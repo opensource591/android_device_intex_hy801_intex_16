@@ -16,3 +16,6 @@
 file_contexts~
 *.java~
 *.te~
+*.*~
+*~
+.*~
